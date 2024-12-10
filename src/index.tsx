@@ -1068,7 +1068,8 @@ export function useAntMedia(params: Params) {
 export function rtc_view(
   stream: any,
   customStyles: any = { width: '70%', height: '50%', alignSelf: 'center' },
-  objectFit: any = 'cover'
+  objectFit: any = 'cover',
+  mirror: any = false
 ) {
   if(stream instanceof MediaStreamTrack ){
     let mediaStream = new MediaStream(undefined);
@@ -1079,6 +1080,7 @@ export function rtc_view(
     streamURL: stream,
     style: customStyles,
     objectFit: objectFit,
+    mirror: mirror
   };
 
   // @ts-ignore
